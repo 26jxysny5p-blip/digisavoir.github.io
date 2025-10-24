@@ -1,18 +1,93 @@
-/* Couleur de fond du site */
+/* --- Style général --- */
 body {
-  background-color: #f4f6f8;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #333;
+  background-color: #f7f9fb;
 }
 
-/* Titre principal */
-h1 {
+/* --- En-tête et menu --- */
+header {
+  background-color: #ffb300;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Section d’accueil --- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffb300, #ff9800);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: white;
+  color: #ff9800;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffe082;
+}
+
+/* --- Sections principales --- */
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.content h2 {
   color: #ff9800;
 }
 
-/* Paragraphe */
-p {
-  color: #333;
-  font-size: 18px;
+/* --- Pied de page --- */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
