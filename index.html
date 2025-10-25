@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DigiSavoir - Apprendre plus simplement</title>
+  <title>DigiSavoir 🌞 - Apprendre plus simplement</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- En-tête avec logo et slogan -->
+  <!-- En-tête avec image de fond -->
   <header class="hero">
     <div class="overlay"></div>
     <div class="header-content">
-      <img src="assets/DIGI%203.png" alt="Logo DigiSavoir" class="logo">
-      <h1>Apprendre plus simplement</h1>
+      <img src="asset/DIGI%203.png" alt="Logo DigiSavoir" class="logo">
+      <h1 class="slogan">Apprendre plus simplement</h1>
+
       <nav class="navbar">
         <ul>
           <li><a href="#cours">Cours</a></li>
-          <li><a href="#classes">Classes</a></li>
           <li><a href="#exercices">Exercices</a></li>
+          <li><a href="#classes">Classes</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#energies">Énergies renouvelables</a></li>
         </ul>
@@ -25,35 +26,38 @@
     </div>
   </header>
 
-  <!-- Section Cours -->
-  <section id="cours" class="section">
-    <h2>📘 Cours</h2>
-    <p>Découvre des leçons simples et claires en mathématiques, physique et chimie adaptées au programme sénégalais.</p>
-  </section>
+  <!-- Section principale en cartes -->
+  <main class="cards-section">
+    <h2>Nos Espaces d’Apprentissage</h2>
+    <div class="cards-container">
 
-  <!-- Section Classes -->
-  <section id="classes" class="section">
-    <h2>🏫 Classes</h2>
-    <p>Accède à ton espace par niveau : collège, lycée ou débutant en énergies renouvelables.</p>
-  </section>
+      <div class="card" id="cours">
+        <h3>📘 Cours</h3>
+        <p>Des leçons claires et accessibles en mathématiques, physique et chimie, selon le programme sénégalais.</p>
+      </div>
 
-  <!-- Section Exercices -->
-  <section id="exercices" class="section">
-    <h2>✏️ Exercices</h2>
-    <p>Entraîne-toi avec des exercices corrigés pour mieux comprendre et progresser à ton rythme.</p>
-  </section>
+      <div class="card" id="exercices">
+        <h3>✏️ Exercices</h3>
+        <p>Entraîne-toi avec des exercices corrigés et progresse à ton rythme.</p>
+      </div>
 
-  <!-- Section Blog -->
-  <section id="blog" class="section">
-    <h2>📰 Blog</h2>
-    <p>Lis nos articles sur les sciences, l’éducation et les innovations solaires au Sénégal.</p>
-  </section>
+      <div class="card" id="classes">
+        <h3>🏫 Classes</h3>
+        <p>Un espace dédié à chaque niveau : collège, lycée ou initiation aux énergies renouvelables.</p>
+      </div>
 
-  <!-- Section Énergies renouvelables -->
-  <section id="energies" class="section">
-    <h2>☀️ Énergies renouvelables</h2>
-    <p>Apprends à comprendre et à utiliser les énergies vertes, en particulier le solaire, pour un avenir durable.</p>
-  </section>
+      <div class="card" id="blog">
+        <h3>📰 Blog</h3>
+        <p>Découvre des articles sur les sciences, l’éducation et le solaire au Sénégal.</p>
+      </div>
+
+      <div class="card" id="energies">
+        <h3>☀️ Énergies renouvelables</h3>
+        <p>Apprends à utiliser le soleil comme source d’énergie propre et durable.</p>
+      </div>
+
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 DigiSavoir — Fatima Diop. Tous droits réservés.</p>
