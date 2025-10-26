@@ -3,105 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digisavoir - Apprendre plus simplement</title>
+  <title>Digisavoir - Accueil</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Icônes -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-  <!-- En-tête -->
   <header>
     <img src="DIGI 3.png" alt="Logo Digisavoir" class="logo">
     <h1>Apprendre plus simplement</h1>
     <nav class="navbar">
       <ul>
-        <li><a href="#cours">Cours</a></li>
-        <li><a href="#exercices">Exercices</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="cours.html">Cours</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Section d’intro -->
   <section class="intro">
     <div class="overlay">
       <h2>Bienvenue sur <span>Digisavoir</span> 🌞</h2>
       <p>Explore, apprends et progresse à ton rythme.</p>
-      <a href="#sections" class="btn">Découvrir</a>
+      <a href="cours.html" class="btn">Commencer à apprendre</a>
     </div>
   </section>
 
-  <!-- Section cartes -->
-  <section id="sections" class="sections">
-    <div class="card" id="cours">
+  <section class="sections">
+    <div class="card">
       <i data-lucide="book-open" class="icon"></i>
       <h3>Cours</h3>
       <p>Des leçons simples, illustrées et adaptées aux élèves du Sénégal.</p>
-      <a href="#" class="card-btn">Découvrir</a>
+      <a href="cours.html" class="card-btn">Découvrir</a>
     </div>
-    <div class="card" id="exercices">
+    <div class="card">
       <i data-lucide="edit-3" class="icon"></i>
       <h3>Exercices</h3>
       <p>Teste tes connaissances avec des exercices interactifs et corrigés.</p>
-      <a href="#" class="card-btn">Découvrir</a>
+      <a href="exercices.html" class="card-btn">Découvrir</a>
     </div>
-    <div class="card" id="classes">
+    <div class="card">
       <i data-lucide="users" class="icon"></i>
       <h3>Classes</h3>
       <p>Rejoins nos classes virtuelles et collabore avec d'autres apprenants.</p>
-      <a href="#" class="card-btn">Découvrir</a>
+      <a href="classes.html" class="card-btn">Découvrir</a>
     </div>
-    <div class="card" id="blog">
+    <div class="card">
       <i data-lucide="globe" class="icon"></i>
       <h3>Blog</h3>
       <p>Apprends sur les énergies renouvelables, la science et l’innovation.</p>
-      <a href="#" class="card-btn">Découvrir</a>
+      <a href="blog.html" class="card-btn">Découvrir</a>
     </div>
   </section>
 
-  <!-- À propos -->
-  <section class="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>À propos de Digisavoir</h2>
-        <p>
-          Digisavoir est une plateforme éducative dédiée à l’apprentissage des mathématiques, 
-          des sciences et des énergies renouvelables.  
-          Notre mission est de rendre le savoir accessible à tous, 
-          en offrant des cours clairs, interactifs et adaptés au contexte du Sénégal.
-        </p>
-        <p>
-          Que tu sois collégien, lycéen ou simple curieux, 
-          Digisavoir t’accompagne pas à pas pour t’aider à comprendre le monde autrement.
-        </p>
-        <a href="#" class="btn-about">En savoir plus</a>
-      </div>
-      <div class="about-image">
-        <img src="backgroundclasse.jpg" alt="Salle de classe - Digisavoir">
-      </div>
-    </div>
-  </section>
-
-  <!-- Pied de page -->
   <footer>
     <p>© 2025 Digisavoir - Le savoir au service du futur 🌍</p>
   </footer>
 
-  <!-- Script pour les icônes + scroll doux -->
   <script>
     lucide.createIcons();
-
-    // Défilement fluide
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
   </script>
 
 </body>
