@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digisavoir - Apprendre plus simplement</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Icônes -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -14,15 +16,15 @@
     <h1>Apprendre plus simplement</h1>
     <nav class="navbar">
       <ul>
-        <li><a href="#">Cours</a></li>
-        <li><a href="#">Exercices</a></li>
-        <li><a href="#">Classes</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#cours">Cours</a></li>
+        <li><a href="#exercices">Exercices</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#blog">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Section d’intro avec image de fond -->
+  <!-- Section d’intro -->
   <section class="intro">
     <div class="overlay">
       <h2>Bienvenue sur <span>Digisavoir</span> 🌞</h2>
@@ -31,31 +33,35 @@
     </div>
   </section>
 
-  <!-- Section cartes modernes -->
+  <!-- Section cartes -->
   <section id="sections" class="sections">
-    <div class="card">
+    <div class="card" id="cours">
+      <i data-lucide="book-open" class="icon"></i>
       <h3>Cours</h3>
       <p>Des leçons simples, illustrées et adaptées aux élèves du Sénégal.</p>
       <a href="#" class="card-btn">Découvrir</a>
     </div>
-    <div class="card">
+    <div class="card" id="exercices">
+      <i data-lucide="edit-3" class="icon"></i>
       <h3>Exercices</h3>
       <p>Teste tes connaissances avec des exercices interactifs et corrigés.</p>
       <a href="#" class="card-btn">Découvrir</a>
     </div>
-    <div class="card">
+    <div class="card" id="classes">
+      <i data-lucide="users" class="icon"></i>
       <h3>Classes</h3>
       <p>Rejoins nos classes virtuelles et collabore avec d'autres apprenants.</p>
       <a href="#" class="card-btn">Découvrir</a>
     </div>
-    <div class="card">
+    <div class="card" id="blog">
+      <i data-lucide="globe" class="icon"></i>
       <h3>Blog</h3>
       <p>Apprends sur les énergies renouvelables, la science et l’innovation.</p>
       <a href="#" class="card-btn">Découvrir</a>
     </div>
   </section>
 
-  <!-- Section À propos -->
+  <!-- À propos -->
   <section class="about">
     <div class="about-content">
       <div class="about-text">
@@ -82,6 +88,21 @@
   <footer>
     <p>© 2025 Digisavoir - Le savoir au service du futur 🌍</p>
   </footer>
+
+  <!-- Script pour les icônes + scroll doux -->
+  <script>
+    lucide.createIcons();
+
+    // Défilement fluide
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
