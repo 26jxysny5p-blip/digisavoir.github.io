@@ -1,18 +1,22 @@
-/* --- Général --- */
+/* --- Style général --- */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f4f8fb;
   color: #333;
+  scroll-behavior: smooth;
 }
 
-/* --- En-tête et menu --- */
+/* --- En-tête --- */
 header {
   background-color: #1976d2;
   color: white;
   text-align: center;
   padding: 25px 0 40px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -25,6 +29,7 @@ header {
 header h1 {
   margin: 10px 0;
   font-size: 2.2rem;
+  letter-spacing: 1px;
 }
 
 .navbar ul {
@@ -65,7 +70,6 @@ header h1 {
   background-image: url('backgroundclasse.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 450px;
   position: relative;
   display: flex;
@@ -73,13 +77,14 @@ header h1 {
   justify-content: center;
   color: white;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .intro::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .intro .overlay {
@@ -88,21 +93,42 @@ header h1 {
 }
 
 .intro h2 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
+}
+
+.intro span {
+  color: #ffeb3b;
 }
 
 .intro p {
   font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fbc02d;
+  transform: scale(1.05);
 }
 
 /* --- Cartes modernes --- */
 .sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
   padding: 50px;
   background-color: #fff;
+  animation: fadeUp 1.5s ease-in-out;
 }
 
 .card {
@@ -115,12 +141,32 @@ header h1 {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card h3 {
   color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card-btn {
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background-color: #0d47a1;
 }
 
 /* --- Pied de page --- */
@@ -129,4 +175,16 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
