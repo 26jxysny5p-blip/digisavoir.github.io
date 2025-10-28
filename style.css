@@ -1,102 +1,185 @@
-/* ====== STYLE GENERAL ====== */
+/* --- Styles généraux --- */
 body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  background: url('backgroundclasse.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-}
-
-/* ====== HEADER ====== */
-header {
-  text-align: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-}
-
-.slogan {
-  font-style: italic;
-  color: #555;
-}
-
-/* ====== NAVBAR ====== */
-.navbar ul {
-  list-style: none;
   padding: 0;
-  margin: 15px 0;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.navbar a {
-  text-decoration: none;
   color: #333;
-  font-weight: 600;
-  transition: color 0.3s;
+  background-color: #f5f7fa;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: #0078ff;
-}
-
-/* ====== SECTION ACCUEIL ====== */
-.hero {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* --- En-tête avec logo et slogan --- */
+header {
+  background-color: rgba(25, 118, 210, 0.95);
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-text h2 {
-  font-size: 2.5rem;
+header img {
+  height: 70px;
+  width: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-/* ====== CARTES ====== */
-.cards {
+header p {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* --- Image de fond accueil --- */
+.hero {
+  background-image: url("backgroundclasse.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h2 {
+  position: relative;
+  color: white;
+  font-size: 2.4rem;
+  z-index: 1;
+  text-align: center;
+}
+
+/* --- Présentation du site --- */
+.presentation {
+  background: white;
+  margin: 50px auto;
+  width: 85%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.presentation h2 {
+  text-align: center;
+  color: #1976d2;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.presentation p {
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* --- Sections principales (cartes) --- */
+.sections {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
-  padding: 40px 0;
-  background: rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 85%;
 }
 
-.card {
-  text-decoration: none;
-  color: #000;
-  background: white;
-  padding: 30px 50px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  font-size: 1.2rem;
+.section-card {
+  background-color: white;
+  border-radius: 16px;
+  width: 280px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.25);
 }
 
-/* ====== FOOTER ====== */
-footer {
+.section-card h3 {
+  color: #1976d2;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.section-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.section-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.section-card a:hover {
+  background-color: #125aa7;
+}
+
+/* --- Sous-sections des pages (Cours, Exercices, etc.) --- */
+.subsections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px auto;
+  width: 85%;
+}
+
+.subsection-card {
+  background-color: white;
+  border-radius: 12px;
+  width: 230px;
   text-align: center;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  font-size: 0.9rem;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.subsection-card:hover {
+  transform: translateY(-6px);
+}
+
+.subsection-card h4 {
+  color: #1976d2;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.subsection-card a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Pied de page --- */
+footer {
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.95rem;
 }
