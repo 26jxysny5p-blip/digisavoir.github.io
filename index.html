@@ -5,65 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digisavoir - Accueil</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- En-tête -->
   <header>
     <img src="DIGI 3.png" alt="Logo Digisavoir" class="logo">
-    <h1>Apprendre plus simplement</h1>
+    <h1>Digisavoir</h1>
+    <p class="slogan">Apprendre plus simplement 🌞</p>
     <nav class="navbar">
       <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="cours.html">Cours</a></li>
         <li><a href="exercices.html">Exercices</a></li>
-        <li><a href="classes.html">Classes</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="intro">
-    <div class="overlay">
-      <h2>Bienvenue sur <span>Digisavoir</span> 🌞</h2>
-      <p>Explore, apprends et progresse à ton rythme.</p>
-      <a href="cours.html" class="btn">Commencer à apprendre</a>
+  <!-- Section image de fond -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Bienvenue sur Digisavoir</h2>
+      <p>Une plateforme éducative pour apprendre les sciences, les mathématiques et les énergies renouvelables.</p>
     </div>
   </section>
 
-  <section class="sections">
-    <div class="card">
-      <i data-lucide="book-open" class="icon"></i>
-      <h3>Cours</h3>
-      <p>Des leçons simples, illustrées et adaptées aux élèves du Sénégal.</p>
-      <a href="cours.html" class="card-btn">Découvrir</a>
-    </div>
-    <div class="card">
-      <i data-lucide="edit-3" class="icon"></i>
-      <h3>Exercices</h3>
-      <p>Teste tes connaissances avec des exercices interactifs et corrigés.</p>
-      <a href="exercices.html" class="card-btn">Découvrir</a>
-    </div>
-    <div class="card">
-      <i data-lucide="users" class="icon"></i>
-      <h3>Classes</h3>
-      <p>Rejoins nos classes virtuelles et collabore avec d'autres apprenants.</p>
-      <a href="classes.html" class="card-btn">Découvrir</a>
-    </div>
-    <div class="card">
-      <i data-lucide="globe" class="icon"></i>
-      <h3>Blog</h3>
-      <p>Apprends sur les énergies renouvelables, la science et l’innovation.</p>
-      <a href="blog.html" class="card-btn">Découvrir</a>
+  <!-- Section Cours -->
+  <section class="cards">
+    <h2>Cours 📘</h2>
+    <div class="card-container">
+      <div class="card">6<sup>e</sup></div>
+      <div class="card">5<sup>e</sup></div>
+      <div class="card">4<sup>e</sup></div>
+      <div class="card">3<sup>e</sup></div>
+      <div class="card">2<sup>nde</sup></div>
+      <div class="card">1<sup>re</sup></div>
+      <div class="card">Tle</div>
     </div>
   </section>
 
+  <!-- Section Exercices -->
+  <section class="cards">
+    <h2>Exercices 🧩</h2>
+    <div class="card-container">
+      <div class="card">6<sup>e</sup></div>
+      <div class="card">5<sup>e</sup></div>
+      <div class="card">4<sup>e</sup></div>
+      <div class="card">3<sup>e</sup></div>
+      <div class="card">2<sup>nde</sup></div>
+      <div class="card">1<sup>re</sup></div>
+      <div class="card">Tle</div>
+    </div>
+  </section>
+
+  <!-- Section Blog -->
+  <section class="cards">
+    <h2>Blog 🌍</h2>
+    <div class="card-container">
+      <div class="card blog">
+        <h3>Les énergies renouvelables au Sénégal</h3>
+        <p>Découvrez comment le soleil devient une ressource d’avenir pour l’éducation et la technologie.</p>
+      </div>
+      <div class="card blog">
+        <h3>Apprentissage numérique</h3>
+        <p>Comment les jeunes utilisent les outils digitaux pour apprendre plus efficacement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
   <footer>
-    <p>© 2025 Digisavoir - Le savoir au service du futur 🌍</p>
+    <p>© 2025 Digisavoir - Tous droits réservés</p>
   </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
 
 </body>
 </html>
