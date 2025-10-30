@@ -1,242 +1,149 @@
-/* === Style global === */
+/* ---- Style global ---- */
 body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background-color: #f8f9fa;
+  padding: 0;
+  background-color: #f4f6f8;
   color: #333;
-  line-height: 1.6;
 }
 
-h1, h2, h3 {
-  color: #1976d2; /* bleu principal */
-}
-
-a {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === En-tête === */
+/* ---- En-tête ---- */
 header {
-  background-color: #1976d2;
+  background-color: #004aad;
   color: white;
   text-align: center;
-  padding: 25px 0 40px 0;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  position: relative;
+  padding: 15px 10px;
 }
 
 header img {
   height: 80px;
   width: auto;
-  display: block;
-  margin: 0 auto 10px;
 }
 
 header h1 {
   margin: 5px 0;
   font-size: 2.2rem;
+  color: #ffcc00; /* 🟡 Couleur du texte Digi Savoir */
 }
 
 header p {
-  margin: 0;
   font-size: 1.1rem;
+  color: #e0e0e0;
 }
 
-/* === Section image de fond === */
+/* ---- Section d’accueil avec image ---- */
 .hero {
-  background: url('backgroundclasse.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  font-size: 1.6rem;
   position: relative;
+  width: 100%;
+  height: 65vh;
+  background: url("backgroundclasse.jpg") no-repeat center center/cover;
 }
 
-.hero::after {
-  content: "";
+.hero-overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero h2 {
-  position: relative;
-  z-index: 1;
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-/* Plus petit pour les pages secondaires */
-.small-hero {
-  padding: 70px 20px;
-  font-size: 1.2rem;
-}
-
-/* === Présentation === */
+/* ---- Présentation du site ---- */
 .presentation {
+  background-color: white;
+  text-align: center;
   padding: 50px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-top: -40px;
-  position: relative;
-  z-index: 2;
 }
 
 .presentation h2 {
-  text-align: center;
-  margin-bottom: 15px;
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .presentation p {
-  text-align: justify;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
 }
 
-/* === Cartes de sections (cours, exercices, blog) === */
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 60px 0;
-  padding: 0 20px;
-}
-
-.section-card {
-  background: white;
-  border-radius: 12px;
-  width: 280px;
-  text-align: center;
-  padding: 25px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.section-card h3 {
-  color: #1976d2;
-}
-
-.section-card a {
-  display: inline-block;
-  margin-top: 15px;
-  background: #1976d2;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.section-card a:hover {
-  background: #0d47a1;
-}
-
-/* === Grille de classes === */
-.class-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.class-card {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.class-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.class-card h3 {
-  color: #1976d2;
-}
-
-.class-card a {
-  display: block;
-  margin: 10px 0;
-  background: #1976d2;
-  color: white;
-  padding: 8px;
-  border-radius: 6px;
-  font-weight: 600;
-}
-
-.class-card a:hover {
-  background: #0d47a1;
-}
-
-/* === Blog === */
-.blog-section {
+/* ---- Section des cartes (Cours, Exercices, Blog) ---- */
+.section-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
   padding: 50px 20px;
+  background-color: #f4f6f8;
 }
 
-.blog-card {
+.card {
   background: white;
-  border-radius: 12px;
-  width: 300px;
-  padding: 25px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.blog-card h3 {
-  margin-top: 0;
+.card h3 {
+  color: #004aad;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.blog-card a {
+.card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.card a {
   display: inline-block;
-  margin-top: 10px;
-  background: #1976d2;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #004aad;
   color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
 }
 
-/* === Pied de page === */
+.card a:hover {
+  background-color: #ffcc00;
+  color: #004aad;
+}
+
+/* ---- Avant propos ---- */
+.avant-propos {
+  background-color: #004aad;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.avant-propos h2 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.avant-propos p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ---- Pied de page ---- */
 footer {
-  background-color: #1976d2;
+  background-color: #002b6b;
   color: white;
   text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #bbdefb;
-}
-
-footer a:hover {
-  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
 }
